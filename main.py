@@ -1,5 +1,5 @@
 # ENDPOINTS
-# Get request at "http://localhost:5000/api/v1/getTableData" expect to recieve table data in json format
+# Get request at "http://localhost:5000/api/v1/tableData" expect to recieve table data in json format
 
 from flask import Flask, jsonify
 import json
@@ -7,7 +7,7 @@ import json
 app = Flask(__name__)
 
 
-@app.route("/api/v1/getTableData")
+@app.route("/api/v1/tableData")
 def getTableData():
     try:
         f = open("tableData.txt", "r")
