@@ -1,5 +1,5 @@
 # ENDPOINTS
-# Get request at "localhost:5000/api/v1/getTableData" expect to recieve table data in json format
+# Get request at "http://localhost:5000/api/v1/getTableData" expect to recieve table data in json format
 
 from flask import Flask, jsonify
 import json
