@@ -2,6 +2,7 @@
 # Get request at "localhost:5000/api/v1/getTableData" expect to recieve table data in json format
 
 from flask import Flask, jsonify
+import json
 
 app = Flask(__name__)
 
@@ -9,7 +10,11 @@ app = Flask(__name__)
 @app.route("/api/v1/getTableData")
 def getTableData():
     try:
-        return jsonify({"message": "this is a message to client"})
+        f = open("tableData.txt", "r")
+        data = json.loads(f.read())
+        f.close()
+
+        return jsonify(data)
     except Exception as err:
         return jsonify({"error": f"{err}"}), 500
 
