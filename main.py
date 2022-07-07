@@ -28,7 +28,6 @@ try:
         length = len(df)
         df.loc[length] = tableRows
 
-    df.to_csv("./tableData.csv")
     df.to_json("./tableData.json")
 except Exception as err:
     print(err)
